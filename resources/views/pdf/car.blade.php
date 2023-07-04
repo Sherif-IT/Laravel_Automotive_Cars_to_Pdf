@@ -22,19 +22,27 @@
         <style>
             @font-face {
                 font-family: Dosis-Regular;
-                src: url('public/fonts/Dosis/Dosis-Regular.ttf');
+                src: url({{asset('fonts/Dosis-Regular.ttf')}});
+/*                src: url('fonts/Dosis/Dosis-Regular.ttf');*/
             }
 
             @font-face {
                 font-family: Dosis-Bold;
-                src: url('public/fonts/Dosis/Dosis-Bold.ttf');
+                src: url({{asset('fonts/Dosis-Bold.ttf')}});
+/*                src: url('fonts/Dosis/Dosis-Bold.ttf');*/
             }
             @page {
                 margin: 0cm;
             }
 
-            body {
+            * {
+                font-family: Dosis-Regular;
+                color: #004054;
+            }
+            h3,h2,h1{
                 font-family: Dosis-Bold;
+            }
+            body {
                 margin-top: 0.5cm;
                 margin-left: 0.5cm;
                 margin-right: 0.5cm;

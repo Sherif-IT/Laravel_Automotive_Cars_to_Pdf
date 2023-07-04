@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//TODO avoid passing to controller, instantiate viewmodel here directly and generate pdf
+Route::get('/document/{car_id}', \App\Http\Controllers\Document\Pdf\PdfController::class);

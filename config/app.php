@@ -183,6 +183,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'CarViewModel' => App\ViewModels\Document\Pdf\CarViewModel::class
     ])->toArray(),
 
 ];

@@ -18,6 +18,8 @@ class PdfController extends Controller
 //        var_dump($viewModel->getCarSectionBySectionKey(CarViewModel::HISTORY_API_URL_KEY));
 //        die();
 //        return $viewModel->view('pdf.car');
-       return PDF::loadView('pdf.car', $viewModel->toArray())->stream("{$viewModel->getCarFileName()}.pdf");
+        $pdf = PDF::loadView('pdf.car', $viewModel->toArray())->setOptions(['defaultFont' => 'sans-serif', 'isRemoteEnabled' => true]);;
+        $pdf->getDomPDF()->setProtocol($_SERVER['DOCUMENT_ROOT']);
+        return $pdf->stream("{$viewModel->getCarFileName()}.pdf");
     }
 }

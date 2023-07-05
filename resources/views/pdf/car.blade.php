@@ -9,38 +9,43 @@
     $carHistoryBlock = $getCarSectionBySectionKey(CarViewModel::HISTORY_API_URL_KEY);
 @endphp
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+{{--<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">--}}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{$carHomeBlock['title']}}</title>
+{{--        <title>{{$carHomeBlock['title']}}</title>--}}
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Styles -->
         <style>
+            /*@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700&display=swap');*/
             @font-face {
-                font-family: Dosis-Regular;
-                src: url({{asset('fonts/Dosis-Regular.ttf')}});
-/*                src: url('fonts/Dosis/Dosis-Regular.ttf');*/
+                /*font-family: Dosis-Regular;*/
+                /*src: url();*/
+                /*src: url('http://127.0.0.1:8080/fonts/Dosis-Regular.ttf') format("truetype");*/
+{{--                src: url({{asset('fonts/Dosis-Regular.ttf')}});--}}
             }
 
             @font-face {
-                font-family: Dosis-Bold;
-                src: url({{asset('fonts/Dosis-Bold.ttf')}});
-/*                src: url('fonts/Dosis/Dosis-Bold.ttf');*/
+                /*font-family: Dosis-Bold;*/
+                /*src: url();*/
+                /*src: url('http://127.0.0.1:8080/fonts/Dosis-Bold.ttf') format("truetype");*/
+{{--                src: url({{asset('fonts/Dosis-Bold.ttf')}});--}}
             }
             @page {
                 margin: 0cm;
             }
 
             * {
-                font-family: Dosis-Regular;
+                font-family: 'Dosis';
                 color: #004054;
             }
             h3,h2,h1{
-                font-family: Dosis-Bold;
+                font-family: 'Dosis';
             }
             body {
                 margin-top: 0.5cm;
@@ -92,6 +97,7 @@
                 width: 10px;
                 height: 10px;
                 background-color: #666;
+                /*z-index: 1;*/
                 /*border-radius: 50%;*/
                 position: relative;
                 border-radius: 5px;
@@ -233,7 +239,7 @@
             }
 
             td.bold {
-                font-family: Dosis-Bold;
+                font-family: 'Dosis';
                 border-width: 2px;
             }
              .page-break {
@@ -246,6 +252,7 @@
                 <section class="car-header">
                     <div class="car-title">
                         <h1 class="" style="margin-bottom: 0px">
+{{--                            <img src="{{asset('loghi/img/logo_big.png')}}">--}}
                             {{$carHomeBlock['title']}}
                         </h1>
                         <div class="car-specs-inner-title">
